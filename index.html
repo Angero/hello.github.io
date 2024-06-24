@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/">
+<!--  <base href="/">-->
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -29,12 +29,12 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>firsttma3</title>
+  <title>firsttma4</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "2140222887";
+    const serviceWorkerVersion = "2106449460";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -42,25 +42,25 @@
   <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
 </head>
 <body>
-  <div id="ton-connect" style="position: absolute; top:10%; right:10%"></div>
+  <div id="ton-connect"></div>
   <script>
     const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-        manifestUrl: 'https://angero.github.io/hello.github.io/topconnect-manifest.json',
+        manifestUrl: 'https://angero.github.io/hello.github.io/tonconnect-manifest.json',
         buttonRootId: 'ton-connect'
     });
   </script>
-<!--  <script>-->
-<!--    async function connectToWallet() {-->
-<!--        const connectedWallet = await tonConnectUI.connectWallet();-->
-<!--        // Do something with connectedWallet if needed-->
-<!--        console.log(connectedWallet);-->
-<!--    }-->
+  <script>
+    async function connectToWallet() {
+        const connectedWallet = await tonConnectUI.connectWallet();
+        // Do something with connectedWallet if needed
+        console.log(connectedWallet);
+    }
 
-<!--    // Call the function-->
-<!--    connectToWallet().catch(error => {-->
-<!--        console.error("Error connecting to wallet:", error);-->
-<!--    });-->
-<!--  </script>-->
+    // Call the function
+    connectToWallet().catch(error => {
+        console.error("Error connecting to wallet:", error);
+    });
+  </script>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
